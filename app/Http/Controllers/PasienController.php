@@ -40,7 +40,8 @@ class PasienController extends Controller
             'norm'=>'required|unique:pasien',
             'nama'=>'required',
             'alamat'=>'required',
-            'no_hp' =>'required'
+            'no_hp' =>'required',
+            'file'=>'required|mimes:pdf',
         ],[
             'norm.required'=>'No RM Harus Diisi',
             'norm.unique' =>'No RM sudah ada',
@@ -48,11 +49,18 @@ class PasienController extends Controller
             'alamat.required'=>'Alamat Harus Diisi',
             'no_hp.required'=>'No  Harus Diisi',
         ]);
+
+        //upload file
+        $datafile= $request->file('file');
+        $datafile->storeAs('public/files', $datafile->hashName());
+
+
         $data = Pasien::create([
             'norm'=>$request->input('norm'),
             'nama'=>$request->input('nama'),
             'alamat'=>$request->input('alamat'),
             'no_hp'=>$request->input('no_hp'),
+            'file'=>$datafile->hashName(),
         ]);
         // return redirect()->route('pasien');
         return redirect()->route('pasien')->with(['success'=>'Data Berhasil Disimpan!!']);

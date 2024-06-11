@@ -9,5 +9,5 @@ class Pasien extends Model
 {
     use HasFactory;
     protected $table="pasien";
-    protected $fillable=["nama","alamat","no_hp","norm"];
+    protected $fillable=["nama","alamat","no_hp","norm","file"];
 }

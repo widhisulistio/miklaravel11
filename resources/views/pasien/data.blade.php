@@ -14,6 +14,7 @@
               <th scope="col">Nama</th>
               <th scope="col">Alamat</th>
               <th scope="col">No HP</th>
+              <th scope="col">Rujukan</th>
               <th scope="col">Aksi</th>
             </tr>
           </thead>
@@ -25,6 +26,7 @@
                       <td>{{ $data->nama }}</td>
                       <td>{{ $data->alamat }}</td>
                       <td>{{ $data->no_hp }}</td>
+                      <td><a href="{{ '/storage/files/'.$data->file }}" target="_blank">Baca</a></td>
                       <td>
                           <div class="btn-group">
                             {{-- <button onclick="window.location.href='{{ route('pasien.edit',$data->id) }}'" class="btn btn-info">Edit</button> --}}

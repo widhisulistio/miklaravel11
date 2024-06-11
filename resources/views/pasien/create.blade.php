@@ -6,7 +6,7 @@
     <div class="container">
       <h1>Form Input Data Pasien</h1>
       <hr>
-      <form action="{{ route('pasien.store') }}" method="POST">
+      <form action="{{ route('pasien.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
           <label for="norm" class="form-label">No Rekam Medis</label>
@@ -44,6 +44,16 @@
             </div>
             @enderror
         </div>
+        <div class="mb-3">
+          <label for="file" class="form-label">Upload Rujukan</label>
+          <input type="file" class="form-control" id="file" name="file">
+          @error('file')
+          <div class="alert alert-danger" role="alert">
+            {{ $message }}
+          </div>
+          @enderror
+      </div>
+
         <button type="submit" class="btn btn-primary">Simpan</button>
       </form>
     </div>
