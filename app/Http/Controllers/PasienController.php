@@ -54,7 +54,8 @@ class PasienController extends Controller
             'alamat'=>$request->input('alamat'),
             'no_hp'=>$request->input('no_hp'),
         ]);
-        return redirect()->route('pasien');
+        // return redirect()->route('pasien');
+        return redirect()->route('pasien')->with(['success'=>'Data Berhasil Disimpan!!']);
     }
 
     /**
@@ -98,7 +99,7 @@ class PasienController extends Controller
             'alamat'=>$request->input('alamat'),
             'no_hp'=>$request->input('no_hp'),
         ]);
-        return redirect()->route('pasien');
+        return redirect()->route('pasien')->with(['success'=>'Data Berhasil Diupdate!!']);;
     }
 
     /**

@@ -26,12 +26,15 @@
                       <td>{{ $data->alamat }}</td>
                       <td>{{ $data->no_hp }}</td>
                       <td>
-                          <a href="{{ route('pasien.edit',$data->id) }}" class="btn btn-info">Edit</a>
-                          <form action="{{ route('pasien.destroy',$data->id) }}" method="post">
-                            @method('DELETE')
-                            @csrf
-                            <button type="submit" class="btn btn-danger">Hapus</button>
-                          </form>
+                          <div class="btn-group">
+                            {{-- <button onclick="window.location.href='{{ route('pasien.edit',$data->id) }}'" class="btn btn-info">Edit</button> --}}
+                            <a href="{{ route('pasien.edit',$data->id) }}" class="btn btn-info">Edit</a> &nbsp;
+                            <form action="{{ route('pasien.destroy',$data->id) }}" method="post">
+                              @method('DELETE')
+                              @csrf
+                              <button type="submit" class="btn btn-danger">Hapus</button>
+                            </form>
+                          </div>
                       </td>
                  </tr>
              @endforeach

@@ -3482,3 +3482,11 @@ Did you mean one of these?
 [stacktrace]
 #0 {main}
 "} 
+[2024-06-11 01:04:15] local.ERROR: Cannot declare class App\Models\Pasien, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Models\\Pasien, because the name is already in use at D:\\laragon\\www\\miklaravel11\\app\\Models\\Pasien1.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-06-11 01:04:15] local.ERROR: Cannot declare class App\Models\Pasien, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Models\\Pasien, because the name is already in use at D:\\laragon\\www\\miklaravel11\\app\\Models\\Pasien1.php:8)
+[stacktrace]
+#0 {main}
+"} 
